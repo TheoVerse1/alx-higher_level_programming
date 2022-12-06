@@ -1,10 +1,19 @@
 #!/usr/bin/python3
 def new_in_list(my_list, idx, element):
-    list = my_list[:]
+    """Replace an element in a list at a specific location
+      without modifying the original
+    Args:
+        my_list: a list
+        idx: the index of item to replace
+        element: item to be substituted
+    Returns:
+        the edited list copy
+    """
+
+    temp_list = my_list.copy()
     if idx < 0:
-        return my_list
+        return temp_list
     if idx >= len(my_list):
-        return my_list
-    else:
-        list[idx] = element
-        return list 
+        return temp_list
+    temp_list[idx] = element
+    return temp_list 
