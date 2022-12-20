@@ -1,16 +1,27 @@
 #!/usr/bin/python3
-SinglyLinkedList = __import__('100-singly_linked_list').SinglyLinkedList
+"""
+No module imported
+"""
 
-sll = SinglyLinkedList()
-sll.sorted_insert(2)
-sll.sorted_insert(5)
-sll.sorted_insert(3)
-sll.sorted_insert(10)
-sll.sorted_insert(1)
-sll.sorted_insert(-4)
-sll.sorted_insert(-3)
-sll.sorted_insert(4)
-sll.sorted_insert(5)
-sll.sorted_insert(12)
-sll.sorted_insert(3)
-print(sll)
+
+class Square:
+    """
+    Defines a square by private attribute size,
+    and instantiation with optional size:
+    def __init__(self, size=0):
+    """
+    def __init__(self, size=0):
+        """
+        private instance attribute
+        parameters
+        ------------------
+        size : integer else TypeError
+        if size less than 0, raise value error
+        """
+        self.__size = size
+        try:
+            assert type(size) == int
+        except:
+            raise TypeError("size must be an integer")
+        if size < 0:
+            raise ValueError("size must be >= 0")
