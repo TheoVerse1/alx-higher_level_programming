@@ -12,4 +12,3 @@
 9. A square is a rectangle
 
 1 Advanced task
-
